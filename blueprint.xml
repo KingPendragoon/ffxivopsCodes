@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Blueprint>
+  <!--
+    Experimental Global mappings for game build 2026.11.03.0000.0000.
+    Sources: karashiiro/FFXIVOpcodes opcodes.json, Global 7.58;
+    xivdev/opcodediff automation/ffxiv_versions_global.json maps this build to 7.58.
+    Eight mappings also agree with paired Lemegeton unknown-opcode and
+    WrathCombo packet labels in the supplied 2026-11-10 Dalamud log.
+    Opcode-table agreement is not packet-layout verification.
+    This file has not been validated in game.
+    Zero entries are unresolved; old-build values have not been carried over.
+    Do not use these mappings for CN or KR clients.
+  -->
+  <Regions>
+    <Region Name="EN/DE/FR/JP" Version="2026.11.03.0000.0000">
+      <Warnings>
+        <Warning Type="Warning" Text="EXPERIMENTAL: mappings sourced from the Global 7.58 opcode table; packet layouts and in-game behavior are not verified." />
+        <Warning Type="Warning" Text="INCOMPLETE: StatusEffectList2/3, BossStatusEffectList, MapEffect and EventPlay variants are unresolved (0). TOP P3/P5 automarking may fail or produce incomplete assignments." />
+      </Warnings>
+      <Opcodes>
+        <!-- StatusEffectList: 340 paired observations. -->
+        <Opcode Name="StatusEffectList" Id="349" />
+        <Opcode Name="StatusEffectList2" Id="0" />
+        <Opcode Name="StatusEffectList3" Id="0" />
+        <Opcode Name="BossStatusEffectList" Id="0" />
+        <!-- WrathCombo Effect: 2806 paired observations. -->
+        <Opcode Name="Ability1" Id="400" />
+        <!-- WrathCombo AoeEffect8: 273 paired observations. -->
+        <Opcode Name="Ability8" Id="563" />
+        <!-- Global 7.58 AoeEffect16/24/32; not observed in the supplied log. -->
+        <Opcode Name="Ability16" Id="281" />
+        <Opcode Name="Ability24" Id="924" />
+        <Opcode Name="Ability32" Id="221" />
+        <!-- ActorCast: 540 paired observations. -->
+        <Opcode Name="ActorCast" Id="352" />
+        <!-- EffectResult: 1091 paired observations. -->
+        <Opcode Name="EffectResult" Id="659" />
+        <!-- ActorControl: 3978; Self: 696; Target: 283 paired observations. -->
+        <Opcode Name="ActorControl" Id="735" />
+        <Opcode Name="ActorControlSelf" Id="169" />
+        <Opcode Name="ActorControlTarget" Id="256" />
+        <Opcode Name="MapEffect" Id="0" />
+        <Opcode Name="EventPlay" Id="0" />
+        <Opcode Name="EventPlay64" Id="0" />
+      </Opcodes>
+    </Region>
+  </Regions>
+</Blueprint>
