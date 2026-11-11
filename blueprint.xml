@@ -11,13 +11,18 @@
     Machina.FFXIV/Headers/Global status structures: status offsets 24,
     0, and 0/380 match Lemegeton's StatusEffectList2/3 and BossStatusEffectList.
     This file has not been validated in game.
-    Zero entries are unresolved; old-build values have not been carried over.
+    MapEffect uses the Global EnvironmentControl candidate (151); not observed
+    as a labelled packet in the supplied log. EventPlay64 (836) is notification-only
+    in Lemegeton. EventPlay (523) is known but disabled pending decoder repair:
+    its legacy field offsets differ from the current EventPlayN reference layout.
+    Zero entries are intentionally disabled; old-build values have not been carried over.
     Do not use these mappings for CN or KR clients.
   -->
   <Regions>
     <Region Name="EN/DE/FR/JP" Version="2026.11.03.0000.0000">
       <Warnings>
-      </Warnings>
+        <Warning Type="Warning" Text="EXPERIMENTAL: mappings sourced from the Global 7.58 opcode table; status variant layouts cross-checked in source. In-game behavior is not verified." 
+      />      </Warnings>
       <Opcodes>
         <!-- StatusEffectList: 340 paired observations. -->
         <Opcode Name="StatusEffectList" Id="349" />
@@ -43,9 +48,12 @@
         <Opcode Name="ActorControl" Id="735" />
         <Opcode Name="ActorControlSelf" Id="169" />
         <Opcode Name="ActorControlTarget" Id="256" />
-        <Opcode Name="MapEffect" Id="0" />
+        <!-- Global EnvironmentControl: candidate for the legacy MapEffect decoder. -->
+        <Opcode Name="MapEffect" Id="151" />
+        <!-- Global EventPlay = 523. Keep disabled pending decoder layout repair. -->
         <Opcode Name="EventPlay" Id="0" />
-        <Opcode Name="EventPlay64" Id="0" />
+        <!-- Global EventPlay64; Lemegeton emits a notification without decoding fields. -->
+        <Opcode Name="EventPlay64" Id="836" />
       </Opcodes>
     </Region>
   </Regions>
