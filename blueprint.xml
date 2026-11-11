@@ -3,35 +3,22 @@
   <Regions>
     <Region Name="EN/DE/FR/JP" Version="2026.11.03.0000.0000">
       <Opcodes>
-        <!-- StatusEffectList: 340 paired observations. -->
         <Opcode Name="StatusEffectList" Id="349" />
-        <!-- StatusEffectListBozja: 4-byte prefix + 20-byte header. -->
         <Opcode Name="StatusEffectList2" Id="164" />
-        <!-- StatusEffectListPlayer: statuses start at payload offset 0. -->
         <Opcode Name="StatusEffectList3" Id="861" />
-        <!-- StatusEffectListDouble: status arrays at payload offsets 0 and 380. -->
         <Opcode Name="BossStatusEffectList" Id="800" />
-        <!-- WrathCombo Effect: 2806 paired observations. -->
         <Opcode Name="Ability1" Id="400" />
-        <!-- WrathCombo AoeEffect8: 273 paired observations. -->
         <Opcode Name="Ability8" Id="563" />
-        <!-- Global 7.58 AoeEffect16/24/32; not observed in the supplied log. -->
         <Opcode Name="Ability16" Id="281" />
         <Opcode Name="Ability24" Id="924" />
         <Opcode Name="Ability32" Id="221" />
-        <!-- ActorCast: 540 paired observations. -->
         <Opcode Name="ActorCast" Id="352" />
-        <!-- EffectResult: 1091 paired observations. -->
         <Opcode Name="EffectResult" Id="659" />
-        <!-- ActorControl: 3978; Self: 696; Target: 283 paired observations. -->
         <Opcode Name="ActorControl" Id="735" />
         <Opcode Name="ActorControlSelf" Id="169" />
         <Opcode Name="ActorControlTarget" Id="256" />
-        <!-- Global EnvironmentControl: candidate for the legacy MapEffect decoder. -->
         <Opcode Name="MapEffect" Id="151" />
-        <!-- Global EventPlay = 523. Keep disabled pending decoder layout repair. -->
         <Opcode Name="EventPlay" Id="0" />
-        <!-- Global EventPlay64; Lemegeton emits a notification without decoding fields. -->
         <Opcode Name="EventPlay64" Id="836" />
       </Opcodes>
     </Region>
