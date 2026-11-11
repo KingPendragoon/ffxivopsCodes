@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Blueprint>
-  <!--
-    Experimental Global mappings for game build 2026.11.03.0000.0000.
-    Sources: karashiiro/FFXIVOpcodes opcodes.json, Global 7.58;
-    xivdev/opcodediff automation/ffxiv_versions_global.json maps this build to 7.58.
-    Eight mappings also agree with paired Lemegeton unknown-opcode and
-    WrathCombo packet labels in the supplied 2026-11-10 Dalamud log.
-    Opcode-table agreement is not packet-layout verification.
-    Status aliases cross-checked against BossMod/Network/ServerIPC.cs and
-    Machina.FFXIV/Headers/Global status structures: status offsets 24,
-    0, and 0/380 match Lemegeton's StatusEffectList2/3 and BossStatusEffectList.
-    This file has not been validated in game.
-    MapEffect uses the Global EnvironmentControl candidate (151); not observed
-    as a labelled packet in the supplied log. EventPlay64 (836) is notification-only
-    in Lemegeton. EventPlay (523) is known but disabled pending decoder repair:
-    its legacy field offsets differ from the current EventPlayN reference layout.
-    Zero entries are intentionally disabled; old-build values have not been carried over.
-    Do not use these mappings for CN or KR clients.
-  -->
   <Regions>
     <Region Name="EN/DE/FR/JP" Version="2026.11.03.0000.0000">
       <Warnings>
