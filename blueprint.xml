@@ -2,9 +2,6 @@
 <Blueprint>
   <Regions>
     <Region Name="EN/DE/FR/JP" Version="2026.11.03.0000.0000">
-      <Warnings>
-        <Warning Type="Warning" Text="EXPERIMENTAL: mappings sourced from the Global 7.58 opcode table; status variant layouts cross-checked in source. In-game behavior is not verified." 
-      />      </Warnings>
       <Opcodes>
         <!-- StatusEffectList: 340 paired observations. -->
         <Opcode Name="StatusEffectList" Id="349" />
