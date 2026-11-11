@@ -16,6 +16,8 @@
   -->
   <Regions>
     <Region Name="EN/DE/FR/JP" Version="2026.11.03.0000.0000">
+      <Warnings>
+      </Warnings>
       <Opcodes>
         <!-- StatusEffectList: 340 paired observations. -->
         <Opcode Name="StatusEffectList" Id="349" />
